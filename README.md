@@ -30,7 +30,7 @@
         └── *.html
 
 ## Access
-  [http://localhost:3000/html/](http://localhost:3000/html/)
+  [http://localhost:3000/html/sample.html](http://localhost:3000/html/sample.html)
 
 ## Functions
 * browserify - enable rollups in javascript
