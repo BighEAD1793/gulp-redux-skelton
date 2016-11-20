@@ -17,15 +17,16 @@
     "browserify": "^13.1.1",
     "gulp": "^3.9.1",
     "gulp-rename": "^1.2.2",
-    "gulp-scss": "^1.4.0",
+    "gulp-rework": "^1.2.0",
+    "gulp-sass": "^2.3.2",
     "jquery": "^3.1.1",
     "react": "^15.4.0",
     "react-bootstrap": "^0.30.6",
     "react-dom": "^15.4.0",
     "react-redux": "^4.4.6",
     "redux": "^3.6.0",
-    "rework": "^1.0.1",
     "rework-npm": "^1.0.0",
+    "rework-plugin-at2x": "^1.0.2",
     "through2": "^2.0.1"
   }
 }

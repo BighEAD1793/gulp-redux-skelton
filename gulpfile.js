@@ -1,21 +1,21 @@
 'use strict';
-var gulp = require('gulp');
-var babelify = require('babelify');
-var rename = require('gulp-rename');
-var scss = require('gulp-scss');
-var rework = require('rework');
-var reworkNPM = require('rework-npm');
-var through2 = require('through2');
-var browserify = require('browserify');
-var browserSync = require('browser-sync').create();
+const gulp = require('gulp');
+const babelify = require('babelify');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass');
+const through2 = require('through2');
+const rework = require('gulp-rework');
+const reworkNPM = require('rework-npm');
+const browserify = require('browserify');
+const browserSync = require('browser-sync').create();
 
-gulp.task('serve', ['babel', 'scss'], () => {
+gulp.task('serve', ['babel', 'sass'], () => {
   browserSync.init({
     server: './',
   });
 
   gulp.watch('./src/js/*.jsx', ['babel']);
-  gulp.watch('./src/scss/*.scss', ['scss']);
+  gulp.watch('./src/scss/*.scss', ['sass']);
   gulp.watch('./html/*.html').on('change', browserSync.reload);
 });
 
@@ -40,10 +40,10 @@ gulp.task('babel', () => {
     .pipe(browserSync.stream());
 });
 
-gulp.task('scss', () => {
+gulp.task('sass', () => {
   gulp.src('./src/scss/*.scss')
-    .pipe(scss())
-    .pipe(rework(reworkNPM))
+    .pipe(rework(reworkNPM(), {sourcemap: true}))
+    .pipe(sass())
     .pipe(rename({extname: '.css'}))
     .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.stream());
