@@ -4,15 +4,15 @@
     npm install
 
 ## Directory
-
+    .
     ├── gulpfile.js
     ├── package.json
     ├── src
     |   ├── js
     |   |   ├── index.js
     |   |   ├── app
-    |   |   |   ├── App.js              #route component
-    |   |   |   ├── reducer.js          #route reducers
+    |   |   |   ├── App.js              #root component
+    |   |   |   ├── reducer.js          #root reducers
     |   |   |   └── ...<Appname>.js     #component with container only
     |   |   └── ...<appname>
     |   |   |   ├── <Appname>.js        #component & container
