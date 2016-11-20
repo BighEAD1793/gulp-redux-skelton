@@ -2,28 +2,36 @@
 
 ## Installation
     npm install
- 
+
 ## Directory
-    .  
+
     ├── gulpfile.js
-    ├── package.json  
-    ├── src  
+    ├── package.json
+    ├── src
     |   ├── js
-    |   |   ├── *.js
-    |   |   └── *.jsx  
-    |   └── scss  
-    |       └── *.scss  
-    ├── dist  
-    |   ├── js  
-    |   |   └── *.js  
-    |   └── css  
-    |       └── *.css  
-    └── html  
-        └── *.html  
+    |   |   ├── index.js
+    |   |   ├── app
+    |   |   |   ├── App.js              #route component
+    |   |   |   ├── reducer.js          #route reducers
+    |   |   |   └── ...<Appname>.js     #component with container only
+    |   |   └── ...<appname>
+    |   |   |   ├── <Appname>.js        #component & container
+    |   |   |   ├── <Appname>Actions.js
+    |   |   |   ├── <appname>Reducer.js
+    |   |   |   └── <Appname><Componentname>.js
+    |   └── scss
+    |       └── *.scss
+    ├── dist
+    |   ├── js
+    |   |   └── *.js
+    |   └── css
+    |       └── *.css
+    └── html
+        └── *.html
 
 ## Access
   [http://localhost:3000/html/](http://localhost:3000/html/)
-  
+
 ## Functions
 * browserify - enable rollups in javascript
 * babel - transcompile jsx and es2015 to es5

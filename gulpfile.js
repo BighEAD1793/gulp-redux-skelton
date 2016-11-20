@@ -14,13 +14,13 @@ gulp.task('serve', ['babel', 'sass'], () => {
     server: './',
   });
 
-  gulp.watch('./src/js/*.jsx', ['babel']);
+  gulp.watch('./src/js/**/*.js', ['babel']);
   gulp.watch('./src/scss/*.scss', ['sass']);
   gulp.watch('./html/*.html').on('change', browserSync.reload);
 });
 
 gulp.task('babel', () => {
-  gulp.src('./src/js/*.jsx')
+  gulp.src('./src/js/*.js')
     .pipe(through2.obj((file, encode, callback) => {
       browserify(file.path)
         .on("error", err => {
